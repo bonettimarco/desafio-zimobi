@@ -1,4 +1,6 @@
 # README
+####O aplicativo pode ser acessado em:
+https://powerful-everglades-24505.herokuapp.com/
 
 Este README documenta os passos necessários para configurar a aplicação e rodar num browser.
 
