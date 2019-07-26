@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este README documenta os passos necessários para configurar a aplicação e rodar num browser.
 
-Things you may want to cover:
+* Ruby version -  2.6.1p33
 
-* Ruby version
-
-* System dependencies
+* System dependencies - mysql-server
 
 * Configuration
+#### No diretório raiz:
+gem install bundler -v 1.17.3
+bundle install
+rails s
 
-* Database creation
+* Criação do banco de dados
+rake db:create:all
+rake db:migrate
 
-* Database initialization
+* Inicializar banco de dados
+#### Setar no database.yml seu usuário e senha do mysql
+  username: root
+  password: tttzzz
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rodar suíte de testes
+rspec

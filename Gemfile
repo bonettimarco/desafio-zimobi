@@ -9,7 +9,6 @@ gem 'sass-rails', '~> 5'
 # gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
-# gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mysql2'
@@ -32,12 +31,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :test do
-  gem 'rspec', '~> 3.8.0'
-  gem 'factory_bot', '~> 5.0.2'
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+group :production do
+  gem 'pg', '0.20.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
