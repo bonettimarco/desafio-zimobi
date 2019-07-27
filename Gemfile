@@ -6,12 +6,13 @@ ruby '2.6.1'
 gem 'rails', '~> 6.0.0.rc2'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
-# gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mysql2'
+gem 'image_processing', '~> 1.2'
 
 group :development, :test do
   gem 'awesome_print'
@@ -22,6 +23,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'simplecov', '~> 0.16.1', require: false
 end
 
 group :development do

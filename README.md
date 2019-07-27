@@ -1,6 +1,9 @@
 # README
 ####O aplicativo pode ser acessado em:
 https://powerful-everglades-24505.herokuapp.com/
+####modelagem
+rails g scaffold User name:string email:string reset_digest:string reset_sent_at:datetime activation_digest:string activated:boolean activated_at:datetime admin:boolean remember_digest:string password_digest:string
+
 
 Este README documenta os passos necessários para configurar a aplicação e rodar num browser.
 

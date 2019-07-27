@@ -1,0 +1,25 @@
+<h1>Usuários</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>email</th>
+      <th>tipo</th>
+      <th>Criar/ ver anuncio</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |usuario| %>
+    <tr>
+      <td><%= usuario.name %></td>
+      <td><%= usuario.email %></td>
+      <td><%= tipo usuario %></td>
+      <td><%= anuncio usuario %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to "Novo Usuário", new_user_path %>
