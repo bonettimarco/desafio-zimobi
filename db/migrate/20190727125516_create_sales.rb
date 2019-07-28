@@ -5,7 +5,7 @@ class CreateSales < ActiveRecord::Migration[6.0]
       t.string :descricao
       t.float :valor
       t.string :historia
-      t.references :users, null: false, foreign_key: true
+      t.integer :user_id
 
       t.timestamps
     end

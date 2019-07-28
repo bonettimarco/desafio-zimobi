@@ -38,10 +38,9 @@ ActiveRecord::Schema.define(version: 2019_07_27_125516) do
     t.string "descricao"
     t.float "valor"
     t.string "historia"
-    t.bigint "user_id", null: false
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_sales_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -60,5 +59,4 @@ ActiveRecord::Schema.define(version: 2019_07_27_125516) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "sales", "users"
 end
