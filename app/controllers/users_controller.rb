@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    popula
+    popula unless User.any?
     @users = User.all
   end
 
@@ -9,9 +9,14 @@ class UsersController < ApplicationController
     @sales = @user.sale
   end
 
+  def new
+    popula
+    redirect_to users_path
+  end
+
   private
 
   def popula
-    User.create(name: "Eduardo Doria", email: "eduardo@zimobi.com.br", admin: false) unless User.any?
+    FactoryBot.create(:user)
   end
 end
