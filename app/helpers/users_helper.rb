@@ -6,8 +6,7 @@ module UsersHelper
   end
 
   def anuncio usuario
-    return "#{link_to sale_path(usuario.sale)}" unless usuario.sale.nil?
-    link_to "Criar anúncio", new_sale_path()
-    "Em obras"
+    return "#{link_to "Novo", new_sale_path(usuario_id: usuario.id)}".html_safe if usuario.sale.nil?
+    link_to "Ver anúncio", sale_path(usuario.sale)
   end
 end

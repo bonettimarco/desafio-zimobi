@@ -1,25 +1,27 @@
 <h1>Usuários</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>email</th>
-      <th>tipo</th>
-      <th>Criar/ ver anuncio</th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>email</th>
+          <th>tipo</th>
+          <th>Criar/ ver anuncio</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @users.each do |usuario| %>
-    <tr>
-      <td><%= usuario.name %></td>
-      <td><%= usuario.email %></td>
-      <td><%= tipo usuario %></td>
-      <td><%= anuncio usuario %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to "Novo Usuário", new_user_path %>
+      <tbody>
+        <% @users.each do |usuario| %>
+        <tr>
+          <td><%= usuario.name %></td>
+          <td><%= usuario.email %></td>
+          <td><%= tipo usuario %></td>
+          <td><%= anuncio usuario %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

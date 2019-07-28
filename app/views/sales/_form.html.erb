@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(sale) do |f| %>
+
+  <%= hidden_field_tag :user_id, @user.id %>
+  <div class="field">
+    <%= f.label :título %>
+    <%= f.text_field :titulo, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :descrição %>
+    <%= f.text_field :descricao, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %>
+    <%= f.number_field :valor, class: 'form-control' %>
+  </div>
+  <div class="area">
+    <%= f.text_area :historia, placeholder: "Descreva aqui o histórico do imóvel ..." %>
+  </div>
+<%= f.submit "Submeter", class: "btn btn-primary" %>
+  <span class="picture">
+    <%= f.file_field :image, accept: 'image;jpg,image;gif,image;png' %>
+  </span>
+<% end %>
+  </div>
+</div>
