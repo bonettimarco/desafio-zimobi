@@ -1,4 +1,7 @@
 class Sale < ApplicationRecord
   has_one_attached :image
-  has_one :user
+  belongs_to :user
+
+  scope :por_usuario, -> (usuario) { where(user_id: usuario.id)}
+
 end
