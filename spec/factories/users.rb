@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :users do
+  factory :user do
     name { Faker::Name.first_name }
     email { Faker::Internet.email }
     reset_digest { "MyString" }
@@ -13,7 +13,7 @@ FactoryBot.define do
   end
   trait :com_anuncio do
     after(:create) do |usuario, evaluator|
-      create(:sale, usuario_id: usuario.id)
+      create(:sale, user_id: usuario.id)
     end
   end
 end
