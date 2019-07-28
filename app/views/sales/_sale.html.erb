@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <% if sale.image %>
+    <% if sale.image.attached? %>
       <div>
         <%= image_tag sale.image.variant(resize_to_limit: [600,600]) %>
       </div>

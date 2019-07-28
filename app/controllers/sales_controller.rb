@@ -1,6 +1,6 @@
 class SalesController < ApplicationController
   def create
-    @sale = User.find(params[:user_id]).build_sale(sale_params) unless User.find(params[:user_id])
+    @sale = User.find(params[:user_id]).build_sale(sale_params) if User.find(params[:user_id])
     if @sale.save
       flash[:success] = "Anúncio criado"
       redirect_to root_url

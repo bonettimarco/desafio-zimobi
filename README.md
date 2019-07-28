@@ -28,3 +28,25 @@ rake db:migrate
 
 * Rodar suíte de testes
 rspec
+
+* Cobertura de testes:
+####Sales
+  criar anúncios
+    cria um anúncio
+  editar anúncio
+    editaum anúncio
+
+####Sale
+####  associations
+    should belong to user required: true
+  testa factory
+    cria anúncio
+    cria usuario com anúncio
+
+####User
+  testa factories
+    cria usuario
+
+####Finished in 2.75 seconds (files took 1.7 seconds to load)
+6 examples, 0 failures
+
